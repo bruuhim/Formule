@@ -3,11 +3,12 @@ const InputDes = document.getElementById("description");
 const InputStatus = document.getElementById("status");
 const taskSubmit = document.getElementById("task-submit");
 const taskList = document.createElement("task-list");
+let taskObj = []
 
 function AddTask() {
   taskSubmit.addEventListener("click", function submitTask(e) {
     e.preventDefault();
-    let taskObj = {
+    taskObj = {
       title: InputTitle.value.trim(),
       description: InputDes.value.trim(),
       status: InputStatus.value.trim(),
